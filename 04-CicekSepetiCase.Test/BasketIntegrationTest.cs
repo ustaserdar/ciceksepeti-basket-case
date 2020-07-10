@@ -1,12 +1,12 @@
-﻿using CicekSepetiCase.Core.Helpers;
+﻿using CicekSepetiCase.API.Models;
+using CicekSepetiCase.Core.Helpers;
+using FluentAssertions;
+using Newtonsoft.Json;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using CicekSepetiCase.API.Models;
-using FluentAssertions;
 using Xunit;
-using System.Net;
 
 namespace CicekSepetiCase.Test
 {
@@ -14,7 +14,6 @@ namespace CicekSepetiCase.Test
     {
         private const string BasePath = "/api/basket/";
 
-        // Should manuel add in the database with this product id and zero stock before test begins
         [Theory]
         [InlineData("5f077905c6b57a2132621ce4")]
         public async Task Add_OutOfStock_Product_To_Basket_Should_Return_Not_Found_Exception(string productId)

@@ -38,7 +38,6 @@ namespace CicekSepetiCase.API
             var provider = services.BuildServiceProvider();
             var settings = provider.GetService<IOptions<MongoDbSettings>>();
             var context = new MongoContext(settings);
-            context.Products.InsertMany(settings.Value.Products, new MongoDB.Driver.InsertManyOptions() { });
             #endregion
 
             ServiceRegistration.ConfigureServices(services);
