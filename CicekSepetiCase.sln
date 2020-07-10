@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CicekSepetiCase.Core", "00-CicekSepetiCase.Core\CicekSepetiCase.Core.csproj", "{309DF73B-2219-45B1-82C2-A505F1F398D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CicekSepetiCase.DataAccess", "01-CicekSepetiCase.DataAccess\CicekSepetiCase.DataAccess.csproj", "{02C8A06D-90AB-47C1-92CE-8A04E5FF2AE4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CicekSepetiCase.Service", "02-CicekSepetiCase.Service\CicekSepetiCase.Service.csproj", "{5C260A9C-9BCB-46F4-9365-B4DBDAEEFA68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CicekSepetiCase.API", "03-CicekSepetiCase.API\CicekSepetiCase.API.csproj", "{0EE94828-BD42-4FB6-A93B-6858614A1E0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CicekSepetiCase.Test", "04-CicekSepetiCase.Test\CicekSepetiCase.Test.csproj", "{2BD3B7AA-8339-4F90-AAD1-F49206209D06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{309DF73B-2219-45B1-82C2-A505F1F398D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309DF73B-2219-45B1-82C2-A505F1F398D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309DF73B-2219-45B1-82C2-A505F1F398D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309DF73B-2219-45B1-82C2-A505F1F398D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C8A06D-90AB-47C1-92CE-8A04E5FF2AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C8A06D-90AB-47C1-92CE-8A04E5FF2AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C8A06D-90AB-47C1-92CE-8A04E5FF2AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C8A06D-90AB-47C1-92CE-8A04E5FF2AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C260A9C-9BCB-46F4-9365-B4DBDAEEFA68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C260A9C-9BCB-46F4-9365-B4DBDAEEFA68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C260A9C-9BCB-46F4-9365-B4DBDAEEFA68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C260A9C-9BCB-46F4-9365-B4DBDAEEFA68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE94828-BD42-4FB6-A93B-6858614A1E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE94828-BD42-4FB6-A93B-6858614A1E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE94828-BD42-4FB6-A93B-6858614A1E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE94828-BD42-4FB6-A93B-6858614A1E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BD3B7AA-8339-4F90-AAD1-F49206209D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD3B7AA-8339-4F90-AAD1-F49206209D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD3B7AA-8339-4F90-AAD1-F49206209D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD3B7AA-8339-4F90-AAD1-F49206209D06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{309DF73B-2219-45B1-82C2-A505F1F398D4} = {8B9C70EF-F8C6-4540-808C-F044A92039CF}
+		{02C8A06D-90AB-47C1-92CE-8A04E5FF2AE4} = {3FB226D1-3BF4-4F3D-96DC-867EEC57DC46}
+		{5C260A9C-9BCB-46F4-9365-B4DBDAEEFA68} = {62636854-417F-4078-B376-0E2FD435154A}
+		{0EE94828-BD42-4FB6-A93B-6858614A1E0A} = {84DC7897-F791-4BDE-B3C1-17D973AB9EAC}
+		{2BD3B7AA-8339-4F90-AAD1-F49206209D06} = {5C47084D-EA23-4E52-A870-BC61045FA676}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD8EFC88-6EB7-4384-82CC-69B93EF35859}
+	EndGlobalSection
+EndGlobal

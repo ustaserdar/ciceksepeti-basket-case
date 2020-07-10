@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>CicekSepetiCase.Service</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\00-CicekSepetiCase.Core\CicekSepetiCase.Core.csproj" />
+    <ProjectReference Include="..\01-CicekSepetiCase.DataAccess\CicekSepetiCase.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
