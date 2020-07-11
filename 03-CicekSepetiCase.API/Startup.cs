@@ -58,7 +58,7 @@ namespace CicekSepetiCase.API
             app.UseSwagger();
             app.UseSwaggerUI(s => s.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Çiçeksepeti Case Basket API"));
 
-            app.UseExceptionHandler(appError => { });
+            app.UseExceptionHandler(error => { });
 
             app.UseRouting();
 

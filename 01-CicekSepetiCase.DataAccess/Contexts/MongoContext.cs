@@ -17,7 +17,7 @@ namespace CicekSepetiCase.DataAccess.Contexts
             MongoDbSettings = options.Value;
             Database = new MongoClient(MongoDbSettings.ConnectionString).GetDatabase(MongoDbSettings.Database);
 
-            FillProductCollectionWithTestEntities();
+            if (Products.CountDocuments(new BsonDocument()) == 0) FillProductCollectionWithTestEntities();
         }
 
         private void FillProductCollectionWithTestEntities()
@@ -26,6 +26,7 @@ namespace CicekSepetiCase.DataAccess.Contexts
             {
                 new ProductEntity()
                 {
+                    Id = new ObjectId("5f097bc6b23bd293904a2296"),
                     Name = "iPhone 7",
                     Description = "Apple iPhone 7",
                     Price = 3000,
@@ -33,6 +34,7 @@ namespace CicekSepetiCase.DataAccess.Contexts
                 },
                 new ProductEntity()
                 {
+                    Id = new ObjectId("5f097bc6b23bd293904a2297"),
                     Name = "Macbook Pro",
                     Description = "Apple Macbook Pro",
                     Price = 15000,
@@ -40,6 +42,7 @@ namespace CicekSepetiCase.DataAccess.Contexts
                 },
                 new ProductEntity()
                 {
+                    Id = new ObjectId("5f097bc6b23bd293904a2298"),
                     Name = "Airpods Pro",
                     Description = "Apple Airpods Pro",
                     Price = 2000,
@@ -47,6 +50,7 @@ namespace CicekSepetiCase.DataAccess.Contexts
                 },
                 new ProductEntity()
                 {
+                    Id = new ObjectId("5f097bc6b23bd293904a2299"),
                     Name = "iWatch",
                     Description = "Apple iWatch",
                     Price = 4000,

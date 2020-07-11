@@ -4,13 +4,18 @@ namespace CicekSepetiCase.API.Models
 {
     public class BaseResponseModel
     {
-        public HttpStatusCode StatusCode { get; set; }
-        public string ErrorMessage { get; set; }
-        public string Exception { get; set; }
+        public ErrorModel Error { get; set; }
     }
 
     public class BaseResponse<T>
     {
         public T ReturnValue { get; set; }
+    }
+
+    public class ErrorModel
+    {
+        public HttpStatusCode StatusCode { get; set; }
+        public string ErrorMessage { get; set; }
+        public string ErrorException { get; set; }
     }
 }

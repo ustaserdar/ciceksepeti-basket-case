@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace CicekSepetiCase.Test
+namespace CicekSepetiCase.Test.Tests
 {
     public class BasketIntegrationTest
     {
@@ -26,7 +26,7 @@ namespace CicekSepetiCase.Test
         }
 
         [Theory]
-        [InlineData("5f0778cd6a7336fcfcfe4046")]
+        [InlineData("5f097bc6b23bd293904a2296")]
         public async Task Add_Product_To_New_Basket_Should_Return_BasketId(string productId)
         {
             using var httpClient = new ClientProvider().HttpClient;
@@ -38,8 +38,9 @@ namespace CicekSepetiCase.Test
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
 
+        // Sample basketId should change after the first product added to any basket
         [Theory]
-        [InlineData("5f0778d6b66edb43f3dd9235", "5f077994562666433c45483f")]
+        [InlineData("5f097bc6b23bd293904a2297", "5f098077efddbccfc8ab13fd")]
         public async Task Add_Product_To_Same_Basket_Should_Return_BasketId(string productId, string basketId)
         {
             using var httpClient = new ClientProvider().HttpClient;

@@ -17,7 +17,7 @@ namespace CicekSepetiCase.Service.Implementations
 
         public async Task<string> AddProductToCart(BasketEntity basket)
         {
-            if (string.IsNullOrEmpty(basket.Id.ToString()))
+            if (basket.Id == BsonObjectId.Empty)
                 return await BasketRepository.Create(basket);
             else
                 return await BasketRepository.Update(basket);

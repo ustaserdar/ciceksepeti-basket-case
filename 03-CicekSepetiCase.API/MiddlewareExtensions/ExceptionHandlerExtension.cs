@@ -1,4 +1,5 @@
 ﻿using CicekSepetiCase.API.Models;
+using CicekSepetiCase.Core.Helpers;
 using CicekSepetiCase.Core.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
@@ -27,20 +28,25 @@ namespace CicekSepetiCase.API.MiddlewareExtensions
                     switch (ex)
                     {
                         case ServiceException serviceException:
-                            serverResponse.StatusCode = serviceException.StatusCode;
-                            serverResponse.ErrorMessage = serviceException.ExceptionMessage;
-                            serverResponse.Exception = serviceException.ExceptionMessage;
+                            serverResponse.Error = new ErrorModel
+                            {
+                                StatusCode = serviceException.StatusCode,
+                                ErrorException = serviceException.ExceptionMessage,
+                                ErrorMessage = serviceException.ExceptionMessage
+                            };
+                            applicationContext.Response.StatusCode = (int)HttpStatusCode.NotFound;
                             break;
                         default:
-                            serverResponse.StatusCode = HttpStatusCode.InternalServerError;
-                            serverResponse.ErrorMessage = "An error was encountered!";
-                            serverResponse.Exception = ex.Message;
+                            serverResponse.Error = new ErrorModel
+                            {
+                                StatusCode = HttpStatusCode.InternalServerError,
+                                ErrorException = ex.Message,
+                                ErrorMessage = "An error was encountered!"
+                            };
                             break;
                     }
 
-                    var jsonResponse = JsonConvert.SerializeObject(serverResponse);
-
-                    await applicationContext.Response.WriteAsync(jsonResponse);
+                    await applicationContext.Response.WriteAsync(serverResponse.ToJSON());
                 });
             });
         }
